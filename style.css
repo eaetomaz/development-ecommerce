@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    text-align: center;
+    margin-top: 20px;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dataTable{
+    text-align: center;
+    margin-top: 50px;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a{
+    color: #000000;
+    text-decoration: none;
+    padding: 0px, 50px, 10px, 0;
+    margin-right: 15px;
+    font-size: 15pt;
+    position: relative;
+}
+
+nav a::after{
+    content: " ";
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+/* body{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.btn-produtos{
+    width: 200px;
+    height: 200px;
+    border: 4px solid #ccc;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+}
+
+button.ativar{
+    border: 4px solid red;    
+}
+
+.linha{
+    width: 100px;
+    height: 5px;
+    background-color: #ccc;
+    display: block;
+    margin: 30px auto;
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+.conteudo{
+    width: 150px;
+    height: 5px;
+    /*background-color: red;*/
+    display: block;
+    margin: 30px auto;
+    transform-origin: center;
+    transition: 0.2s;
+    color: transparent;
+}
+
+button.ativar .linha:nth-child(1){
+    transform: translateY(36px) rotate(-45deg);
+    background-color: red;    
+}
+
+button.ativar .linha:nth-child(3){
+    transform: translateY(-36px) rotate(45deg);
+    background-color: red;    
+}
+
+button.ativar .linha:nth-child(2){
+    width: 0;
+}
+
+button.ativar .conteudo:nth-child(4){    
+    color:red;            
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    padding: 40px, 10px, 30px, 10px;
+    border-right: 1px solid #000000;   
+    transition: all 0.35s; 
+}
+
+.logo-img{
+    width: 35px;
+    min-height: 35px;
+    border-radius: 60%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 10px;
+}
+
+.logo-img:hover{
+    transform:scale(1.5);
+}
+
+.sidebar button{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: sans-serif;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.sidebar button > span{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+}
+
+.sidebar button:hover > span{
+    background-color: rgba(133, 121, 121, 0.08);
+}
+
+.sidebar button i{
+    position: relative;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.sidebar button span{
+    font-size: 16px;
+}
+
+.sidebar > nav{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main{
+    margin-left: 250px;
+    margin-right: 6px;
+    overflow: hidden;
+}
+
+
+/* Ajustando sidebar mediante ao tamanho da tela */
+
+@media (width < 920px){
+    .sidebar{
+        width: 55px;
+    }
+
+    .sidebar button > span{
+        width: 50px;        
+    }
+
+    .sidebar button > span > span{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href ="index.html">Home</a>
+        <a href ="">Categorias</a>
+        <a href ="produtos.html">Produtos</a>
+        <a href ="">Login</a>
+        <a href ="">Carrinho</a>
+    </nav><br> 
+
+    <aside class="sidebar">
+        <header>
+            <img class="logo-img"src="https://sujeitoprogramador.com/steve.png" alt="Foto do usuário">            
+        </header>            
+
+        <nav>
+            <button>
+                <span>
+                    <i>@</i>            
+                    <span>Home</span>
+                </span>
+            </button>
+            <button>
+                <span>
+                    <i>@</i>
+                    <span>Explorar</span>
+                </span>
+            </button>
+        </nav>
+    </aside>    
+
+<main class="main">
+<h1>Produtos</h1><br><br>
+
+<table>
+    <tr>
+        <td>
+            <button onclick="animar()" id="btn-menu" class="btn-produtos">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="conteudo">Produto indisponível</span>
+            </button>
+        </td>
+    </tr>    
+    <tr>
+        <td>
+            <font face ="Verdana"><center>Coca-cola 2L</center></font>
+        </td>
+    </tr>
+</table>
+
+    <script>
+        function animar(){
+            const btn = document.getElementById('btn-menu')
+            btn.classList.toggle('ativar')
+        }             
+    </script>    
+</main>
+</body>
+</html>
